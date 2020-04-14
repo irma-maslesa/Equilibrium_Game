@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerControler : MonoBehaviour
 {
@@ -20,5 +21,11 @@ public class PlayerControler : MonoBehaviour
 
         else if(Input.GetKey(negative))
             GetComponent<Rigidbody>().velocity -= velocityVector;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.tag == "NPC")
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
