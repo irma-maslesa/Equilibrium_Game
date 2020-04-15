@@ -8,8 +8,6 @@ public class CameraRotation : MonoBehaviour
     KeyCode LeftRotation;
     [SerializeField]
     KeyCode RightRotation;
-    
-
 
     // Update is called once per frame
     void Update()
@@ -56,6 +54,5 @@ public class CameraRotation : MonoBehaviour
                     break;
                 }
 
-        
     }
 }
