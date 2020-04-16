@@ -7,7 +7,7 @@ public class SceneMenager : MonoBehaviour
 {
     [SerializeField]
     KeyCode restart;
-
+    
     // Update is called once per frame
     void Update()
     {
@@ -21,4 +21,5 @@ public class SceneMenager : MonoBehaviour
         if(collision.collider.tag == "Player")
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+   
 }
