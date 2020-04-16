@@ -1,36 +1,46 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PlayerControler : MonoBehaviour
 {
     [SerializeField]
-    Vector3 velocityVector;
+    Vector3 velocityVector = new Vector3(0, 0, 0);
 
-    static public KeyCode front = KeyCode.UpArrow;
-    static public KeyCode back = KeyCode.DownArrow;
-    static public KeyCode right = KeyCode.RightArrow;
-    static public KeyCode left = KeyCode.LeftArrow;
+    static KeyCode front;
+    static KeyCode back;
+    static KeyCode right;
+    static KeyCode left;
 
-    private void MenageControls()
+    static public void SetDefaultControls()
     {
-        PlayerControler.front = KeyCode.UpArrow;
-        PlayerControler.back = KeyCode.DownArrow;
-        PlayerControler.right = KeyCode.RightArrow;
-        PlayerControler.left = KeyCode.LeftArrow;
+        front = KeyCode.UpArrow;
+        back = KeyCode.DownArrow;
+        right = KeyCode.RightArrow;
+        left = KeyCode.LeftArrow;
     }
 
-    private void MenageCamera()
+    static public void LeftRotation()
     {
-        GameObject[] cams = GameObject.FindGameObjectsWithTag("MainCamera");
-        for (int i = 0; i < cams.Length; i++)
-            if (cams[i].GetComponent<Camera>().enabled)
-            {
-                cams[i].GetComponent<Camera>().enabled = false;
-            }
+        KeyCode help = front;
+        front = left;
+        left = back;
+        back = right;
+        right = help;
+    }
 
-        GameObject.Find("Cam0").GetComponent<Camera>().enabled = true;
+    static public void RightRotation()
+    {
+        KeyCode help = front;
+        front = right;
+        right = back;
+        back = left;
+        left = help;
+    }
+
+    void Start()
+    {
+        SetDefaultControls();
     }
 
     // Update is called once per frame
@@ -38,7 +48,7 @@ public class PlayerControler : MonoBehaviour
     {
         if (Input.GetKey(right))
             GetComponent<Rigidbody>().velocity += new Vector3(velocityVector.x, 0, 0);
-        else if(Input.GetKey(left))
+        else if (Input.GetKey(left))
             GetComponent<Rigidbody>().velocity -= new Vector3(velocityVector.x, 0, 0);
         else if (Input.GetKey(front))
             GetComponent<Rigidbody>().velocity += new Vector3(0, 0, velocityVector.z);
@@ -46,13 +56,4 @@ public class PlayerControler : MonoBehaviour
             GetComponent<Rigidbody>().velocity -= new Vector3(0, 0, velocityVector.z);
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.collider.tag == "NPC")
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            MenageControls();
-            MenageCamera();
-        }
-    }
 }

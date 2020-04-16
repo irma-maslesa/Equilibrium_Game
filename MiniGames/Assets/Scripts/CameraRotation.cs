@@ -5,54 +5,59 @@ using UnityEngine;
 public class CameraRotation : MonoBehaviour
 {
     [SerializeField]
-    KeyCode LeftRotation;
+    KeyCode LeftRotation = KeyCode.A;
     [SerializeField]
-    KeyCode RightRotation;
+    KeyCode RightRotation = KeyCode.D;
+
+    static public void TurnOnDefaultCamera()
+    {
+        GameObject[] cams = GameObject.FindGameObjectsWithTag("MainCamera");
+        for (int i = 1; i < cams.Length; i++)
+            cams[i].GetComponent<Camera>().enabled = false;
+
+        cams[0].GetComponent<Camera>().enabled = true;
+    }
+
+    void Start()
+    {
+        TurnOnDefaultCamera();
+    }
 
     // Update is called once per frame
     void Update()
     {
+
         GameObject[] cams = GameObject.FindGameObjectsWithTag("MainCamera");
 
-        if(Input.GetKeyDown(LeftRotation))
-            for(int i = 0; i< cams.Length; i++)
-                if(cams[i].GetComponent<Camera>().enabled)
-                {
-                    cams[i].GetComponent<Camera>().enabled = false;
 
-                    int indeks = i + 1;
-                    if (indeks == cams.Length)
-                        indeks = 0;
-
-                    cams[indeks].GetComponent<Camera>().enabled = true;
-
-                    KeyCode help = PlayerControler.front;
-                    PlayerControler.front = PlayerControler.left;
-                    PlayerControler.left = PlayerControler.back;
-                    PlayerControler.back = PlayerControler.right;
-                    PlayerControler.right = help;
-                    break;
-                }
-
-        if (Input.GetKeyDown(RightRotation))
+        if (Input.GetKeyDown(LeftRotation) || Input.GetKeyDown(RightRotation))
             for (int i = 0; i < cams.Length; i++)
                 if (cams[i].GetComponent<Camera>().enabled)
                 {
-                    cams[i].GetComponent<Camera>().enabled = false;
+                    int indeks;
 
-                    int indeks = i - 1;
-                    if (indeks == -1)
-                        indeks = cams.Length - 1;
+                    if (Input.GetKeyDown(LeftRotation))
+                    {
+                        indeks = i + 1;
+                        if (indeks == cams.Length) indeks = 0;
+
+                        PlayerControler.LeftRotation();
+                    }
+
+                    else
+                    {
+                        indeks = i - 1;
+                        if (indeks == -1) indeks = cams.Length - 1;
+
+                        PlayerControler.RightRotation();
+                    }
 
                     cams[indeks].GetComponent<Camera>().enabled = true;
-
-                    KeyCode help = PlayerControler.front;
-                    PlayerControler.front = PlayerControler.right;
-                    PlayerControler.right = PlayerControler.back;
-                    PlayerControler.back = PlayerControler.left;
-                    PlayerControler.left = help;
+                    cams[i].GetComponent<Camera>().enabled = false;
                     break;
                 }
+
+
 
     }
 }
