@@ -28,4 +28,5 @@ public class PlayerControler : MonoBehaviour
         if (collision.collider.tag == "NPC")
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+    
 }
