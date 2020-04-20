@@ -5,8 +5,15 @@ TagManager:
   serializedVersion: 2
   tags:
   - NPC
+<<<<<<< HEAD
   - END
   - LevelComplete
+=======
+  - Cam0
+  - Cam1
+  - Cam2
+  - Cam3
+>>>>>>> master
   layers:
   - Default
   - TransparentFX
