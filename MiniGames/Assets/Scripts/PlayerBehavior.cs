@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class PlayerBehavior : MonoBehaviour
 {
     public Text collected;
+    GameObject exitLight;
 
     int coinsCounter;
     int count;
@@ -15,6 +16,9 @@ public class PlayerBehavior : MonoBehaviour
     {
         count = 0;
         coinsCounter = GameObject.FindGameObjectsWithTag("Coin").Length;
+        exitLight = GameObject.FindGameObjectWithTag("Finish");
+
+        exitLight.gameObject.SetActive(false);
         displayCollected();
     }
     private void OnCollisionEnter(Collision collision)
@@ -43,7 +47,11 @@ public class PlayerBehavior : MonoBehaviour
     {
         collected.text = $"Collected: {count}/{coinsCounter}";
 
-        if (count == coinsCounter) collected.text = "Collected all, GO TO EXIT!";
+        if (count == coinsCounter)
+        {
+            collected.text = "Collected all, GO FIND EXIT LIGHT!";
+            exitLight.gameObject.SetActive(true);
+        }
     }
 
     public bool isAllCollected()
