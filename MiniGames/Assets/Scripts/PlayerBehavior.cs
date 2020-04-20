@@ -29,7 +29,17 @@ public class PlayerBehavior : MonoBehaviour
             PlayerControler.SetDefaultControls();
             CameraRotation.TurnOnDefaultCamera();
         }
+        else if (collision.collider.tag == "END")
+        {
+            GameObject.FindGameObjectWithTag("LevelComplete").transform.position = new Vector3(384.5f, 195, 0);
+            Invoke("LoadNextLevel", 3);
+        }
     }
+    public void LoadNextLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
 
     private void OnTriggerEnter(Collider other)
     {
