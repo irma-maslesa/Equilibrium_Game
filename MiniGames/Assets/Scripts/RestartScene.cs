@@ -8,7 +8,6 @@ public class RestartScene : MonoBehaviour
     [SerializeField]
     KeyCode restart = KeyCode.R;
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(restart))
