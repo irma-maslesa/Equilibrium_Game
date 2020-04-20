@@ -6,6 +6,7 @@ TagManager:
   tags:
   - NPC
 <<<<<<< HEAD
+<<<<<<< HEAD
   - END
   - LevelComplete
 =======
@@ -14,6 +15,9 @@ TagManager:
   - Cam2
   - Cam3
 >>>>>>> master
+=======
+  - Coin
+>>>>>>> 046b314975670bc56b6e0d990cea1b233aeeb689
   layers:
   - Default
   - TransparentFX

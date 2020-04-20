@@ -107,7 +107,6 @@ public class CameraRotation : MonoBehaviour
 
                         PlayerControler.LeftRotation();
                     }
-
                     else
                     {
                         indeks = i - 1;
