@@ -6,8 +6,11 @@ using UnityEngine.UI;
 
 public class PlayerBehavior : MonoBehaviour
 {
-    public Text collected;
+    [SerializeField]
+    Text collected;
     GameObject exitLight;
+
+    GameObject panel;
 
     int coinsCounter;
     int count;
@@ -17,7 +20,8 @@ public class PlayerBehavior : MonoBehaviour
         count = 0;
         coinsCounter = GameObject.FindGameObjectsWithTag("Coin").Length;
         exitLight = GameObject.FindGameObjectWithTag("Finish");
-
+        panel = GameObject.FindGameObjectWithTag("LevelComplete");
+        panel.SetActive(false);
         exitLight.gameObject.SetActive(false);
         displayCollected();
     }
@@ -29,9 +33,11 @@ public class PlayerBehavior : MonoBehaviour
             PlayerControler.SetDefaultControls();
             CameraRotation.TurnOnDefaultCamera();
         }
+
         else if (collision.collider.tag == "END")
         {
-            GameObject.FindGameObjectWithTag("LevelComplete").transform.position = new Vector3(384.5f, 195, 0);
+            Time.timeScale = 0;
+            panel.SetActive(true);
             Invoke("LoadNextLevel", 3);
         }
     }
@@ -50,7 +56,7 @@ public class PlayerBehavior : MonoBehaviour
             count++;
             displayCollected();
         }
-            
+
     }
 
     private void displayCollected()
@@ -59,8 +65,8 @@ public class PlayerBehavior : MonoBehaviour
 
         if (count == coinsCounter)
         {
-            collected.text = "Collected all, GO FIND EXIT LIGHT!";
             exitLight.gameObject.SetActive(true);
+            collected.text = "Collected all, GO FIND EXIT LIGHT!";
         }
     }
 
