@@ -17,6 +17,7 @@ public class PlayerBehavior : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 1;
         count = 0;
         coinsCounter = GameObject.FindGameObjectsWithTag("Coin").Length;
         exitLight = GameObject.FindGameObjectWithTag("Finish");
@@ -34,29 +35,30 @@ public class PlayerBehavior : MonoBehaviour
             CameraRotation.TurnOnDefaultCamera();
         }
 
-        else if (collision.collider.tag == "END")
+        else if (collision.collider.tag == "Finish")
         {
-            Time.timeScale = 0;
+            collected.gameObject.SetActive(false);
+            GameObject.FindGameObjectWithTag("Player").SetActive(false);
             panel.SetActive(true);
             Invoke("LoadNextLevel", 3);
         }
     }
     public void LoadNextLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        int nextIndex = SceneManager.GetActiveScene().buildIndex + 1;
+        if (nextIndex < SceneManager.sceneCountInBuildSettings)
+            SceneManager.LoadScene(nextIndex);
     }
 
 
     private void OnTriggerEnter(Collider other)
     {
-
         if (other.tag == "Coin")
         {
             other.gameObject.SetActive(false);
             count++;
             displayCollected();
         }
-
     }
 
     private void displayCollected()
