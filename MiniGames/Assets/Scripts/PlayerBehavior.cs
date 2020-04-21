@@ -17,7 +17,6 @@ public class PlayerBehavior : MonoBehaviour
 
     private void Start()
     {
-        Time.timeScale = 1;
         count = 0;
         coinsCounter = GameObject.FindGameObjectsWithTag("Coin").Length;
         exitLight = GameObject.FindGameObjectWithTag("Finish");
@@ -37,6 +36,8 @@ public class PlayerBehavior : MonoBehaviour
 
         else if (collision.collider.tag == "Finish")
         {
+            string time = GameObject.Find("Time").GetComponent<Text>().text;
+            GameObject.Find("Time").SetActive(false);
             collected.gameObject.SetActive(false);
             GameObject.FindGameObjectWithTag("Player").SetActive(false);
             panel.SetActive(true);
