@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class AttachPlayer : MonoBehaviour
 {
-    public GameObject player;
+    [SerializeField]
+    GameObject player;
 
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject == player)	player.transform.parent = transform;
-       
-            
+        if (other.gameObject == player)	player.transform.parent = transform;   
     }
 
     private void OnTriggerExit(Collider other)

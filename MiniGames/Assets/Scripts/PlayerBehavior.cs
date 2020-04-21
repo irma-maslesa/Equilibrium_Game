@@ -6,8 +6,11 @@ using UnityEngine.UI;
 
 public class PlayerBehavior : MonoBehaviour
 {
-    public Text collected;
+    [SerializeField]
+    Text collected;
     GameObject exitLight;
+
+    GameObject panel;
 
     int coinsCounter;
     int count;
@@ -17,7 +20,8 @@ public class PlayerBehavior : MonoBehaviour
         count = 0;
         coinsCounter = GameObject.FindGameObjectsWithTag("Coin").Length;
         exitLight = GameObject.FindGameObjectWithTag("Finish");
-
+        panel = GameObject.FindGameObjectWithTag("LevelComplete");
+        panel.SetActive(false);
         exitLight.gameObject.SetActive(false);
         displayCollected();
     }
@@ -29,28 +33,33 @@ public class PlayerBehavior : MonoBehaviour
             PlayerControler.SetDefaultControls();
             CameraRotation.TurnOnDefaultCamera();
         }
-        else if (collision.collider.tag == "END")
+
+        else if (collision.collider.tag == "Finish")
         {
-            GameObject.FindGameObjectWithTag("LevelComplete").transform.position = new Vector3(384.5f, 195, 0);
+            string time = GameObject.Find("Time").GetComponent<Text>().text;
+            GameObject.Find("Time").SetActive(false);
+            collected.gameObject.SetActive(false);
+            GameObject.FindGameObjectWithTag("Player").SetActive(false);
+            panel.SetActive(true);
             Invoke("LoadNextLevel", 3);
         }
     }
     public void LoadNextLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        int nextIndex = SceneManager.GetActiveScene().buildIndex + 1;
+        if (nextIndex < SceneManager.sceneCountInBuildSettings)
+            SceneManager.LoadScene(nextIndex);
     }
 
 
     private void OnTriggerEnter(Collider other)
     {
-
         if (other.tag == "Coin")
         {
             other.gameObject.SetActive(false);
             count++;
             displayCollected();
         }
-            
     }
 
     private void displayCollected()
@@ -59,8 +68,8 @@ public class PlayerBehavior : MonoBehaviour
 
         if (count == coinsCounter)
         {
-            collected.text = "Collected all, GO FIND EXIT LIGHT!";
             exitLight.gameObject.SetActive(true);
+            collected.text = "Collected all, GO FIND EXIT LIGHT!";
         }
     }
 
