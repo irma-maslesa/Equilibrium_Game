@@ -41,16 +41,10 @@ public class PlayerBehavior : MonoBehaviour
             collected.gameObject.SetActive(false);
             GameObject.FindGameObjectWithTag("Player").SetActive(false);
             panel.SetActive(true);
-            Invoke("LoadNextLevel", 3);
+            
         }
     }
-    public void LoadNextLevel()
-    {
-        int nextIndex = SceneManager.GetActiveScene().buildIndex + 1;
-        if (nextIndex < SceneManager.sceneCountInBuildSettings)
-            SceneManager.LoadScene(nextIndex);
-    }
-
+   
 
     private void OnTriggerEnter(Collider other)
     {
