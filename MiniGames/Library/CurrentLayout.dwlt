@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 548}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -45,10 +45,10 @@ MonoBehaviour:
     y: 30
     width: 1536
     height: 731
-  m_MinSize: {x: 683, y: 498}
+  m_MinSize: {x: 681, y: 498}
   m_MaxSize: {x: 14004, y: 14048}
   vertical: 0
-  controlID: 87
+  controlID: 62
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -217,10 +217,10 @@ MonoBehaviour:
     y: 0
     width: 1089
     height: 731
-  m_MinSize: {x: 406, y: 498}
+  m_MinSize: {x: 404, y: 498}
   m_MaxSize: {x: 10002, y: 14048}
   vertical: 1
-  controlID: 88
+  controlID: 63
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -242,10 +242,10 @@ MonoBehaviour:
     y: 0
     width: 1089
     height: 442
-  m_MinSize: {x: 406, y: 224}
-  m_MaxSize: {x: 8006, y: 4024}
+  m_MinSize: {x: 404, y: 224}
+  m_MaxSize: {x: 8004, y: 4024}
   vertical: 0
-  controlID: 89
+  controlID: 64
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -378,9 +378,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 36}
-    m_SelectedIDs: c40f0000
-    m_LastClickedID: 4036
-    m_ExpandedIDs: 000000009a0a0000b80c0000ea0e0000a20f000042110000b012000000ca9a3b
+    m_SelectedIDs: 9a330000
+    m_LastClickedID: 13210
+    m_ExpandedIDs: 00000000a82e0000c0300000ce3200007e330000fe3400005436000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -408,7 +408,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000009a0a0000b80c0000ea0e0000a20f000042110000b0120000
+    m_ExpandedIDs: 00000000a82e0000c0300000ce3200007e330000fe34000054360000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -527,9 +527,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 840e0000
+      m_SelectedIDs: ee330000
       m_LastClickedID: 0
-      m_ExpandedIDs: fc8cfeff8e94feff9294feff9694feffa494feffb694feffca94feff0699feff2a9afeff409afeff529afeff669afeffea9efeffb4a4feff88a6feff9ea6feffb0a6feffc4a6feff00abfeff9cb5feffa0b5feffa4b5feffb2b5feffc4b5feffd8b5feff5cbafeff7ad1feff48d7feff8e05ffffec05ffff6c15ffff761cffff4a1dffff741dffff041fffff6227ffff5428ffff222affff902bffffa22bffffb42bffffcc2bffff042cffff722dffff5831ffff9235ffffd252ffff5257ffff485fffff8063ffff4c69ffff146fffffd07dffff5082ffff4288ffff7a8cffff5498ffffd49cfffffe9effffbeaaffff84b5ffff04baffff26bdffff5ec1ffff10f6ffffdefbffff9c350000ba350000e87e0000067f0000aabd010040be0100cabe010036bf010054bf010002c0010010c00100e6c70100fcc7010032c8010042c80100dedc0100f4dc0100
+      m_ExpandedIDs: 1cd7ffff3cf9ffff50f9ffff2037000036370000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
