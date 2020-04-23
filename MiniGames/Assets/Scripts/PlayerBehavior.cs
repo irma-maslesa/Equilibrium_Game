@@ -41,10 +41,8 @@ public class PlayerBehavior : MonoBehaviour
             collected.gameObject.SetActive(false);
             GameObject.FindGameObjectWithTag("Player").SetActive(false);
             panel.SetActive(true);
-            
         }
     }
-   
 
     private void OnTriggerEnter(Collider other)
     {
