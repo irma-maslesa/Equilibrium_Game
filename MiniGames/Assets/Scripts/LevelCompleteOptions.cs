@@ -8,7 +8,8 @@ public class LevelCompleteOptions : MonoBehaviour
     public void LoadNextLevel()
     {
         int nextIndex = SceneManager.GetActiveScene().buildIndex + 1;
-        SceneManager.LoadScene(nextIndex);
+        if (nextIndex < SceneManager.sceneCountInBuildSettings)
+            SceneManager.LoadScene(nextIndex);
     }
     public void TryAgain()
     {

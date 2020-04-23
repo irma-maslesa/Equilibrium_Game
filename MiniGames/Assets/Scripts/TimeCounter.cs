@@ -15,7 +15,6 @@ public class TimeCounter : MonoBehaviour
     void Update()
     {
         count += Time.deltaTime;
-        Debug.Log(count);
 
         CheckAndDisplay();
     }
