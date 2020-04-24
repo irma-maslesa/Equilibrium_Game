@@ -8,22 +8,27 @@ public class PlayerBehavior : MonoBehaviour
 {
     [SerializeField]
     Text collected;
+    [SerializeField]
     GameObject exitLight;
 
-    GameObject panel;
-
     int coinsCounter;
-    int count;
+    int collectedCoins;
+
+    GameObject time;
+    GameObject panel;
 
     private void Start()
     {
-        count = 0;
+        collectedCoins = 0;
         coinsCounter = GameObject.FindGameObjectsWithTag("Coin").Length;
         exitLight = GameObject.FindGameObjectWithTag("Finish");
-        panel = GameObject.FindGameObjectWithTag("LevelComplete");
-        panel.SetActive(false);
         exitLight.gameObject.SetActive(false);
         displayCollected();
+
+        collected = GameObject.Find("Collected").GetComponent<Text>();
+        time = GameObject.Find("Time");
+        panel = GameObject.FindGameObjectWithTag("LevelComplete");
+        panel.SetActive(false);
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -36,11 +41,19 @@ public class PlayerBehavior : MonoBehaviour
 
         else if (collision.collider.tag == "Finish")
         {
-            string time = GameObject.Find("Time").GetComponent<Text>().text;
-            GameObject.Find("Time").SetActive(false);
+            gameObject.SetActive(false);
+
+            time.SetActive(false);
             collected.gameObject.SetActive(false);
-            GameObject.FindGameObjectWithTag("Player").SetActive(false);
             panel.SetActive(true);
+
+            float vrijeme = TimeCounter.seconds;
+
+            GameObject.FindGameObjectWithTag("Star1").SetActive(false);
+
+            if (vrijeme < 90) GameObject.FindGameObjectWithTag("Star2").SetActive(false);
+
+            if (vrijeme < 60) GameObject.FindGameObjectWithTag("Star3").SetActive(false);
         }
     }
 
@@ -49,24 +62,24 @@ public class PlayerBehavior : MonoBehaviour
         if (other.tag == "Coin")
         {
             other.gameObject.SetActive(false);
-            count++;
+            collectedCoins++;
             displayCollected();
         }
     }
 
     private void displayCollected()
     {
-        collected.text = $"Collected: {count}/{coinsCounter}";
+        collected.text = $"Collected: {collectedCoins}/{coinsCounter}";
 
-        if (count == coinsCounter)
+        exitLight.gameObject.SetActive(true);
+        if (collectedCoins == coinsCounter)
         {
-            exitLight.gameObject.SetActive(true);
             collected.text = "Collected all, GO FIND EXIT LIGHT!";
         }
     }
 
     public bool isAllCollected()
     {
-        return count == coinsCounter;
+        return collectedCoins == coinsCounter;
     }
 }
