@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6385570294767864984}
   m_Layer: 5
   m_Name: StarNotEarned
-  m_TagString: Untagged
+  m_TagString: Star2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -85,7 +85,7 @@ GameObject:
   - component: {fileID: 7032574354552708269}
   m_Layer: 5
   m_Name: StarNotEarned
-  m_TagString: Untagged
+  m_TagString: Star3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -860,7 +860,7 @@ GameObject:
   - component: {fileID: 1584827904016939168}
   m_Layer: 5
   m_Name: StarNotEarned
-  m_TagString: Untagged
+  m_TagString: Star1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1214,7 +1214,7 @@ GameObject:
   - component: {fileID: 5665999274415310622}
   - component: {fileID: 5665999274415310621}
   m_Layer: 5
-  m_Name: Canvas 1
+  m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
