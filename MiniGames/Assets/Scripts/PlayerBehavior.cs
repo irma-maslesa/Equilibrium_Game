@@ -69,12 +69,14 @@ public class PlayerBehavior : MonoBehaviour
 
     private void displayCollected()
     {
-        collected.text = $"Collected: {collectedCoins}/{coinsCounter}";
+       collected.text = $"Collected: {collectedCoins}/{coinsCounter}";
 
-        exitLight.gameObject.SetActive(true);
+
+        
         if (collectedCoins == coinsCounter)
         {
             collected.text = "Collected all, GO FIND EXIT LIGHT!";
+	    exitLight.gameObject.SetActive(true);
         }
     }
 
