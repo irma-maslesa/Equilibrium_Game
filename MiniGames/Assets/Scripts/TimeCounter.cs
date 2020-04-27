@@ -9,17 +9,20 @@ public class TimeCounter : MonoBehaviour
     [SerializeField]
     Text time;
 
+    float counter;
     public static float seconds;
 
     private void Start()
     {
         time = GameObject.Find("Time").GetComponent<Text>();
+        counter = 0;
     }
 
 
     void Update()
     {
-        seconds += Time.deltaTime;
+        counter += Time.deltaTime;
+        seconds = counter;
 
         DisplayTime();
     }
@@ -28,8 +31,8 @@ public class TimeCounter : MonoBehaviour
     {
         int h, m, s;
 
-        m = (int)seconds / 60;
-        s = (int)seconds % 60;
+        m = (int)counter / 60;
+        s = (int)counter % 60;
 
         h = m / 60;
         m %= 60;
