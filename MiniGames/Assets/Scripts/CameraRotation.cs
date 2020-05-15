@@ -51,8 +51,12 @@ public class CameraRotation : MonoBehaviour
                         PlayerControler.RightRotation();
                     }
 
-                    cams[indeks].GetComponent<Camera>().enabled = true;
-                    cams[i].GetComponent<Camera>().enabled = false;
+
+                    GameObject.Find($"Cam{i}").GetComponent<Camera>().enabled = false;
+                    GameObject.Find($"Cam{indeks}").GetComponent<Camera>().enabled = true;
+                    //cams[i].GetComponent<Camera>().enabled = false;
+                    //cams[indeks].GetComponent<Camera>().enabled = true;
+                    
                     break;
                 }
 
