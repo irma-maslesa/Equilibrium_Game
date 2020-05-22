@@ -18,7 +18,7 @@ public class CameraRotation: MonoBehaviour
     }
 
     // Update is called once per frame
-    void LateUpdate()
+    void Update()
     {
         if (Input.GetKeyDown(LeftRotation))
         {

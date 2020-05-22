@@ -40,9 +40,9 @@ public class TimeCounter : MonoBehaviour
         string hh, mm, ss;
 
         hh = h < 10? "0" + h.ToString() : h.ToString();
-        mm = m < 10 ? "0" + m.ToString() : m.ToString();
-        ss = s < 10 ? "0" + s.ToString() : s.ToString();
+        mm = m < 10? "0" + m.ToString() : m.ToString();
+        ss = s < 10? "0" + s.ToString() : s.ToString();
 
-        time.text = h > 0 ? $"Time - {hh}:{mm}:{ss}" : $"Time - {mm}:{ss}";
+        time.text = h > 0? $"Time - {hh}:{mm}:{ss}" : $"Time - {mm}:{ss}";
     }
 }

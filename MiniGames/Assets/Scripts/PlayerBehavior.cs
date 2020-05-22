@@ -8,12 +8,11 @@ public class PlayerBehavior : MonoBehaviour
 {
     [SerializeField]
     Text collected;
-    [SerializeField]
+
     GameObject exitLight;
 
     int coinsCounter;
     int collectedCoins;
-
     GameObject time;
     GameObject panel;
 
@@ -21,15 +20,18 @@ public class PlayerBehavior : MonoBehaviour
     {
         collectedCoins = 0;
         coinsCounter = GameObject.FindGameObjectsWithTag("Coin").Length;
-        exitLight = GameObject.FindGameObjectWithTag("Finish");
-        exitLight.gameObject.SetActive(false);
+        collected = GameObject.Find("Collected").GetComponent<Text>();
+
         displayCollected();
 
-        collected = GameObject.Find("Collected").GetComponent<Text>();
         time = GameObject.Find("Time");
         panel = GameObject.FindGameObjectWithTag("LevelComplete");
+        exitLight = GameObject.FindGameObjectWithTag("Finish");
+
+        exitLight.gameObject.SetActive(false);
         panel.SetActive(false);
     }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.tag == "NPC")
@@ -50,9 +52,9 @@ public class PlayerBehavior : MonoBehaviour
 
             GameObject.FindGameObjectWithTag("Star1").SetActive(false);
 
-            if (vrijeme < 90) GameObject.FindGameObjectWithTag("Star2").SetActive(false);
+            if(vrijeme < 90) GameObject.FindGameObjectWithTag("Star2").SetActive(false);
 
-            if (vrijeme < 60) GameObject.FindGameObjectWithTag("Star3").SetActive(false);
+            if(vrijeme < 60) GameObject.FindGameObjectWithTag("Star3").SetActive(false);
         }
     }
 
@@ -65,17 +67,14 @@ public class PlayerBehavior : MonoBehaviour
             displayCollected();
         }
     }
-
     private void displayCollected()
     {
-       collected.text = $"Collected: {collectedCoins}/{coinsCounter}";
+        collected.text = $"Collected: {collectedCoins}/{coinsCounter}";
 
-
-        
         if (collectedCoins == coinsCounter)
         {
             collected.text = "Collected all, GO FIND EXIT LIGHT!";
-	    exitLight.gameObject.SetActive(true);
+            exitLight.SetActive(true);
         }
     }
 

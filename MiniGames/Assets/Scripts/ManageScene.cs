@@ -6,16 +6,34 @@ using UnityEngine.UI;
 
 public class ManageScene : MonoBehaviour
 {
-    [SerializeField]
-    KeyCode restart = KeyCode.R;
+    GameObject GamePaused;
+    GameObject GamePanel;
+    GameObject LevelComplete;
 
-    void Update()
+    private void Start()
     {
-        if (Input.GetKeyDown(restart))
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            PlayerControler.SetDefaultControls();
-        }
+        Time.timeScale = 1;
+
+        GamePaused = GameObject.FindGameObjectWithTag("GamePaused");
+        GamePanel = GameObject.FindGameObjectWithTag("GamePanel");
+        LevelComplete = GameObject.FindGameObjectWithTag("LevelComplete");
+
+        GamePanel.SetActive(true);
+        LevelComplete.SetActive(false);
+        GamePaused.SetActive(false);
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        PlayerControler.SetDefaultControls();
+    }
+
+    public void Pause()
+    {
+        Time.timeScale = 0;
+        GamePanel.SetActive(false);
+        GamePaused.SetActive(true);
     }
 
     private void OnCollisionEnter(Collision collision)

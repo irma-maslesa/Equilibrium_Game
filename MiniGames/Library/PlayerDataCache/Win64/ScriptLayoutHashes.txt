@@ -120,8 +120,8 @@ ad9173d3a69d99153f38ed4b62226129 UnityEngine.Networking.dll:UnityEngine.Networki
 9b895dcabbc1faf095c000c32d471fd0 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 5887ef1bc706b22b773d253fd443ceef UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
-cc8c0e37d399972a47bc0823d1f6e411 Assembly-CSharp.dll:.ManageScene
-78728aca5b9fccffa0a5b709bedf32a3 Assembly-CSharp.dll:.PlayerBehavior
+f8d373a7164b66aedbd95ce478048e34 Assembly-CSharp.dll:.ManageScene
+2f2051fca702d8afca2d18073581c86c Assembly-CSharp.dll:.PlayerBehavior
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.LevelCompleteOptions
 4d16cfbaa8e821a2b370e80844a0e9bc Assembly-CSharp.dll:TMPro.Examples.Benchmark03
 e6f0efd0e20669d577e9d21526b3d3f9 Assembly-CSharp.dll:TMPro.Examples.WarpTextExample
@@ -186,6 +186,7 @@ a1ca1237bad0f30ea5ba8f4060929114 Assembly-CSharp.dll:TMPro.Examples.TMP_TextSele
 3b760e6526e13f7504f59e210145899a Unity.TextMeshPro.dll:TMPro.TextMeshProUGUI
 507174d46dacbc5fe45e28485db5dd1e Unity.Analytics.DataPrivacy.dll:UnityEngine.Analytics.DataPrivacyButton
 27e5341178f188b89bdc6495710b590c Assembly-CSharp.dll:TMPro.Examples.Benchmark01_UGUI
+0d9c84914c35d84eee431b82b1222b96 Assembly-CSharp.dll:.CameraRotation
 8a874a8207a7664bdf44e61f28717254 Assembly-CSharp.dll:TMPro.Examples.SkewTextExample
 d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 fe2d355deb0ca31d59a0a7cf4d141fc3 Assembly-CSharp.dll:TMPro.Examples.Benchmark04
@@ -204,6 +205,5 @@ df434544c9f7b33d1cc7e635b180d279 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 3165968ba45c74472d279ba04455fccb Unity.TextMeshPro.dll:TMPro.TMP_ColorGradient
 0784d4fd5b93bd75440d01eb2fac4233 Assembly-CSharp.dll:TMPro.Examples.VertexShakeA
 8b1fe5dfdcf943fb3b72506b9f19335f Assembly-CSharp.dll:.EnvMapAnimator
-71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.CoinManager
+240680c9894084ec140c5974a2566427 Assembly-CSharp.dll:.CoinManager
 8649814970b42d345b89944b862453cc Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
-0d9c84914c35d84eee431b82b1222b96 Assembly-CSharp.dll:.CameraRotation
