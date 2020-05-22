@@ -36,7 +36,6 @@ public class PlayerBehavior : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             PlayerControler.SetDefaultControls();
-            CameraRotation.TurnOnDefaultCamera();
         }
 
         else if (collision.collider.tag == "Finish")

@@ -15,7 +15,6 @@ public class ManageScene : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             PlayerControler.SetDefaultControls();
-            CameraRotation.TurnOnDefaultCamera();
         }
     }
 
@@ -25,7 +24,6 @@ public class ManageScene : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             PlayerControler.SetDefaultControls();
-            CameraRotation.TurnOnDefaultCamera();
         }
     }
 
