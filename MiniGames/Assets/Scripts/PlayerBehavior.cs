@@ -8,28 +8,30 @@ public class PlayerBehavior : MonoBehaviour
 {
     [SerializeField]
     Text collected;
-    [SerializeField]
+
     GameObject exitLight;
 
     int coinsCounter;
     int collectedCoins;
 
-    GameObject time;
-    GameObject panel;
+    GameObject LevelComplete;
+    GameObject GamePanel;
 
     private void Start()
     {
         collectedCoins = 0;
         coinsCounter = GameObject.FindGameObjectsWithTag("Coin").Length;
-        exitLight = GameObject.FindGameObjectWithTag("Finish");
-        exitLight.gameObject.SetActive(false);
+
         displayCollected();
 
-        collected = GameObject.Find("Collected").GetComponent<Text>();
-        time = GameObject.Find("Time");
-        panel = GameObject.FindGameObjectWithTag("LevelComplete");
-        panel.SetActive(false);
+        LevelComplete = GameObject.FindGameObjectWithTag("LevelComplete");
+        GamePanel = GameObject.FindGameObjectWithTag("GamePanel");
+        exitLight = GameObject.FindGameObjectWithTag("Finish");
+
+        exitLight.gameObject.SetActive(false);
+        LevelComplete.SetActive(false);
     }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.tag == "NPC")
@@ -42,17 +44,16 @@ public class PlayerBehavior : MonoBehaviour
         {
             gameObject.SetActive(false);
 
-            time.SetActive(false);
-            collected.gameObject.SetActive(false);
-            panel.SetActive(true);
+            GamePanel.SetActive(false);
+            LevelComplete.SetActive(true);
 
             float vrijeme = TimeCounter.seconds;
 
             GameObject.FindGameObjectWithTag("Star1").SetActive(false);
 
-            if (vrijeme < 90) GameObject.FindGameObjectWithTag("Star2").SetActive(false);
+            if(vrijeme < 90) GameObject.FindGameObjectWithTag("Star2").SetActive(false);
 
-            if (vrijeme < 60) GameObject.FindGameObjectWithTag("Star3").SetActive(false);
+            if(vrijeme < 60) GameObject.FindGameObjectWithTag("Star3").SetActive(false);
         }
     }
 
@@ -65,17 +66,14 @@ public class PlayerBehavior : MonoBehaviour
             displayCollected();
         }
     }
-
     private void displayCollected()
     {
-       collected.text = $"Collected: {collectedCoins}/{coinsCounter}";
+        collected.text = $"Collected: {collectedCoins}/{coinsCounter}";
 
-
-        
         if (collectedCoins == coinsCounter)
         {
             collected.text = "Collected all, GO FIND EXIT LIGHT!";
-	    exitLight.gameObject.SetActive(true);
+            exitLight.SetActive(true);
         }
     }
 

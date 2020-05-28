@@ -7,24 +7,15 @@ using UnityEngine.UI;
 public class ManageScene : MonoBehaviour
 {
     [SerializeField]
-    KeyCode restart = KeyCode.R;
+    GameObject GamePaused;
+    [SerializeField]
+    GameObject GamePanel;
 
-    void Update()
+    private void Start()
     {
-        if (Input.GetKeyDown(restart))
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            PlayerControler.SetDefaultControls();
-        }
-    }
+        Time.timeScale = 1;
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.collider.tag == "Player")
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            PlayerControler.SetDefaultControls();
-        }
+        GamePanel.SetActive(true);
+        GamePaused.SetActive(false);
     }
-
 }

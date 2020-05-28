@@ -7,14 +7,11 @@ TagManager:
   - LevelComplete
   - NPC
   - Coin
-  - END
   - Star1
   - Star2
   - Star3
-  - Cam0
-  - Cam1
-  - Cam2
-  - Cam3
+  - GamePaused
+  - GamePanel
   layers:
   - Default
   - TransparentFX

@@ -43,7 +43,6 @@ public class PlayerControler : MonoBehaviour
         SetDefaultControls();
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         if (Input.GetKey(right))
