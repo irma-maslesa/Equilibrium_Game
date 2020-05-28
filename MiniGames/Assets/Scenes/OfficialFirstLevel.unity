@@ -11949,11 +11949,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelComplete
       objectReference: {fileID: 0}
-    - target: {fileID: 2920666900678696077, guid: 7c37035e3b3309142922339c82b99bb3,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3746420195706326235, guid: 7c37035e3b3309142922339c82b99bb3,
         type: 3}
       propertyPath: m_AnchorMin.y
