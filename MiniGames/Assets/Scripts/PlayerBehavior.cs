@@ -13,23 +13,23 @@ public class PlayerBehavior : MonoBehaviour
 
     int coinsCounter;
     int collectedCoins;
-    GameObject time;
-    GameObject panel;
+
+    GameObject LevelComplete;
+    GameObject GamePanel;
 
     private void Start()
     {
         collectedCoins = 0;
         coinsCounter = GameObject.FindGameObjectsWithTag("Coin").Length;
-        collected = GameObject.Find("Collected").GetComponent<Text>();
 
         displayCollected();
 
-        time = GameObject.Find("Time");
-        panel = GameObject.FindGameObjectWithTag("LevelComplete");
+        LevelComplete = GameObject.FindGameObjectWithTag("LevelComplete");
+        GamePanel = GameObject.FindGameObjectWithTag("GamePanel");
         exitLight = GameObject.FindGameObjectWithTag("Finish");
 
         exitLight.gameObject.SetActive(false);
-        panel.SetActive(false);
+        LevelComplete.SetActive(false);
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -44,9 +44,8 @@ public class PlayerBehavior : MonoBehaviour
         {
             gameObject.SetActive(false);
 
-            time.SetActive(false);
-            collected.gameObject.SetActive(false);
-            panel.SetActive(true);
+            GamePanel.SetActive(false);
+            LevelComplete.SetActive(true);
 
             float vrijeme = TimeCounter.seconds;
 

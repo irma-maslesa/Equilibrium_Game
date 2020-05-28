@@ -14,10 +14,8 @@ public class TimeCounter : MonoBehaviour
 
     private void Start()
     {
-        time = GameObject.Find("Time").GetComponent<Text>();
         counter = 0;
     }
-
 
     void Update()
     {
