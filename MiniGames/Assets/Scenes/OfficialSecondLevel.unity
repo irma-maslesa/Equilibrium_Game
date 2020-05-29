@@ -7135,6 +7135,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f88b3270e8db4334bb94fe6c5ac151d9, type: 3}
+--- !u!1 &1688316140 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5986392542569372442, guid: f88b3270e8db4334bb94fe6c5ac151d9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1688316139}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1691236935
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7668,6 +7674,18 @@ PrefabInstance:
       propertyPath: panel
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 153878908, guid: fed3326cdf27e0e468ae0fbe21cf3625, type: 3}
+      propertyPath: LevelComplete
+      value: 
+      objectReference: {fileID: 2032717732}
+    - target: {fileID: 153878908, guid: fed3326cdf27e0e468ae0fbe21cf3625, type: 3}
+      propertyPath: exitLight
+      value: 
+      objectReference: {fileID: 1688316140}
+    - target: {fileID: 153878908, guid: fed3326cdf27e0e468ae0fbe21cf3625, type: 3}
+      propertyPath: GamePanel
+      value: 
+      objectReference: {fileID: 1096916563}
     - target: {fileID: 969990622002418639, guid: fed3326cdf27e0e468ae0fbe21cf3625,
         type: 3}
       propertyPath: m_Name
@@ -8645,6 +8663,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c37035e3b3309142922339c82b99bb3, type: 3}
+--- !u!1 &2032717732 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2920666900678696077, guid: 7c37035e3b3309142922339c82b99bb3,
+    type: 3}
+  m_PrefabInstance: {fileID: 2032717731}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2034823405
 GameObject:
   m_ObjectHideFlags: 0

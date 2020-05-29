@@ -5076,6 +5076,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 818546909}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &834047699 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5986392542569372442, guid: f88b3270e8db4334bb94fe6c5ac151d9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1245744740}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &839515941
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8864,6 +8870,18 @@ PrefabInstance:
       propertyPath: collected
       value: 
       objectReference: {fileID: 317446621}
+    - target: {fileID: 153878908, guid: fed3326cdf27e0e468ae0fbe21cf3625, type: 3}
+      propertyPath: LevelComplete
+      value: 
+      objectReference: {fileID: 1898903691}
+    - target: {fileID: 153878908, guid: fed3326cdf27e0e468ae0fbe21cf3625, type: 3}
+      propertyPath: exitLight
+      value: 
+      objectReference: {fileID: 834047699}
+    - target: {fileID: 153878908, guid: fed3326cdf27e0e468ae0fbe21cf3625, type: 3}
+      propertyPath: GamePanel
+      value: 
+      objectReference: {fileID: 6218121098376349415}
     - target: {fileID: 969990622002418639, guid: fed3326cdf27e0e468ae0fbe21cf3625,
         type: 3}
       propertyPath: m_Name

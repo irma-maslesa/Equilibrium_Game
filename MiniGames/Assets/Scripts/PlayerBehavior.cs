@@ -9,27 +9,26 @@ public class PlayerBehavior : MonoBehaviour
     [SerializeField]
     Text collected;
 
+    [SerializeField]
+    GameObject LevelComplete;
+    [SerializeField]
     GameObject exitLight;
+
+    [SerializeField]
+    GameObject GamePanel;
 
     int coinsCounter;
     int collectedCoins;
-
-    GameObject LevelComplete;
-    GameObject GamePanel;
 
     private void Start()
     {
         collectedCoins = 0;
         coinsCounter = GameObject.FindGameObjectsWithTag("Coin").Length;
 
-        displayCollected();
-
-        LevelComplete = GameObject.FindGameObjectWithTag("LevelComplete");
-        GamePanel = GameObject.FindGameObjectWithTag("GamePanel");
-        exitLight = GameObject.FindGameObjectWithTag("Finish");
-
         exitLight.gameObject.SetActive(false);
         LevelComplete.SetActive(false);
+
+        displayCollected();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -42,6 +41,7 @@ public class PlayerBehavior : MonoBehaviour
 
         else if (collision.collider.tag == "Finish")
         {
+            Time.timeScale = 0;
             gameObject.SetActive(false);
 
             GamePanel.SetActive(false);
