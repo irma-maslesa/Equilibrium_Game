@@ -131,7 +131,7 @@ b8a5e8091ab0b8861d2add371082c5e0 Unity.TextMeshPro.dll:TMPro.TMP_SpriteAsset
 08ee418b801850b56a351565b9c8bb78 Assembly-CSharp.dll:TMPro.TMP_TextEventHandler
 47930f3b40e24ef5b3b5e3d9ada7097a Assembly-CSharp.dll:TMPro.Examples.Benchmark01
 32523ae291f390862cb29fd59a9579fa Assembly-CSharp.dll:SlimUI.ModernMenu.OptionsMenuNew
-71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.LevelSelect
+0187dd73f0a164e92fc706484c727b71 Assembly-CSharp.dll:.LevelSelect
 b3ab2106268377ffe25dd18ac23dca28 Unity.TextMeshPro.dll:TMPro.TMP_Asset
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.GameOver
 3375c3d749f8f4cad889721b431bdc27 Assembly-CSharp.dll:TMPro.Examples.CameraController
