@@ -961,5 +961,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayButton
       objectReference: {fileID: 0}
+    - target: {fileID: 8448021481540089343, guid: 190bd2081c2169342bfddf8ea9d314ee,
+        type: 3}
+      propertyPath: m_text
+      value: PLAY
+      objectReference: {fileID: 0}
+    - target: {fileID: 8448021481540089343, guid: 190bd2081c2169342bfddf8ea9d314ee,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 190bd2081c2169342bfddf8ea9d314ee, type: 3}

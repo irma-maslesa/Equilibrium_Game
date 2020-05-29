@@ -50,10 +50,11 @@ public class PlayerBehavior : MonoBehaviour
             float vrijeme = TimeCounter.seconds;
 
             GameObject.FindGameObjectWithTag("Star1").SetActive(false);
-
             if(vrijeme < 90) GameObject.FindGameObjectWithTag("Star2").SetActive(false);
-
             if(vrijeme < 60) GameObject.FindGameObjectWithTag("Star3").SetActive(false);
+
+            if (PlayerPrefs.GetInt("LevelReached") < SceneManager.GetActiveScene().buildIndex)
+                PlayerPrefs.SetInt("LevelReached", SceneManager.GetActiveScene().buildIndex);
         }
     }
 
@@ -66,6 +67,7 @@ public class PlayerBehavior : MonoBehaviour
             displayCollected();
         }
     }
+
     private void displayCollected()
     {
         collected.text = $"Collected: {collectedCoins}/{coinsCounter}";
