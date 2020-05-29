@@ -34,4 +34,9 @@ public class GamePausedOptions : MonoBehaviour
 
         Time.timeScale = 1;
     }
+
+    public void SelectLevel()
+    {
+        SceneManager.LoadScene("LevelSelect");
+    }
 }

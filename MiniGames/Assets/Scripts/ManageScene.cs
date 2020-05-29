@@ -10,6 +10,7 @@ public class ManageScene : MonoBehaviour
     GameObject GamePaused;
     [SerializeField]
     GameObject GamePanel;
+    
 
     private void Start()
     {

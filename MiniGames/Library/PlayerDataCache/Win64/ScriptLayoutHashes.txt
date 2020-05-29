@@ -3,6 +3,7 @@ PlayerPath?
 D:/OneDrive - Faculty of Information Technologies/Desktop/MiniGames.exe
 SceneListBegin?
 Assets/Scenes/StartMenu.unity
+Assets/Scenes/LevelSelect.unity
 Assets/Scenes/OfficialFirstLevel.unity
 Assets/Scenes/OfficialSecondLevel.unity
 Assets/Scenes/OfficialThirdLevel.unity
@@ -59,8 +60,6 @@ aa165095bcf0f4d99594ea33df01c81b UnityEngine.UI.dll:UnityEngine.UI.Slider
 abf1930d8126d0b2e00e9449129a0190 UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 64e54c0cbb0177c5ea26f340efb9ff85 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
 d3c76b14a25eebd3a3323dd43297919c Unity.TextMeshPro.dll:TMPro.TMP_InputField
-71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Advertisements.dll:UnityEngine.Advertisements.CallbackExecutor
-71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Advertisements.dll:UnityEngine.Advertisements.Editor.Placeholder
 cf9f5cf2c3145a37ac07f00e50e460f9 UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
 507174d46dacbc5fe45e28485db5dd1e UnityEngine.UI.dll:UnityEngine.UI.Button
@@ -123,7 +122,7 @@ ad9173d3a69d99153f38ed4b62226129 UnityEngine.Networking.dll:UnityEngine.Networki
 5887ef1bc706b22b773d253fd443ceef UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 5499f72042b308ce008a1d66420f1a0a Assembly-CSharp.dll:.ManageScene
-240680c9894084ec140c5974a2566427 Assembly-CSharp.dll:.PlayerBehavior
+8f14b0d57148e6f571a98e0c1ddd12c6 Assembly-CSharp.dll:.PlayerBehavior
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.LevelCompleteOptions
 4d16cfbaa8e821a2b370e80844a0e9bc Assembly-CSharp.dll:TMPro.Examples.Benchmark03
 e6f0efd0e20669d577e9d21526b3d3f9 Assembly-CSharp.dll:TMPro.Examples.WarpTextExample
@@ -132,6 +131,7 @@ b8a5e8091ab0b8861d2add371082c5e0 Unity.TextMeshPro.dll:TMPro.TMP_SpriteAsset
 08ee418b801850b56a351565b9c8bb78 Assembly-CSharp.dll:TMPro.TMP_TextEventHandler
 47930f3b40e24ef5b3b5e3d9ada7097a Assembly-CSharp.dll:TMPro.Examples.Benchmark01
 32523ae291f390862cb29fd59a9579fa Assembly-CSharp.dll:SlimUI.ModernMenu.OptionsMenuNew
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.LevelSelect
 b3ab2106268377ffe25dd18ac23dca28 Unity.TextMeshPro.dll:TMPro.TMP_Asset
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.GameOver
 3375c3d749f8f4cad889721b431bdc27 Assembly-CSharp.dll:TMPro.Examples.CameraController
