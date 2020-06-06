@@ -466,6 +466,41 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: RestartProgress
       objectReference: {fileID: 0}
+    - target: {fileID: 8448021481479496435, guid: 190bd2081c2169342bfddf8ea9d314ee,
+        type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8448021481479496435, guid: 190bd2081c2169342bfddf8ea9d314ee,
+        type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8448021481479496435, guid: 190bd2081c2169342bfddf8ea9d314ee,
+        type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8448021481479496435, guid: 190bd2081c2169342bfddf8ea9d314ee,
+        type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.a
+      value: 0.53333336
+      objectReference: {fileID: 0}
+    - target: {fileID: 8448021481479496435, guid: 190bd2081c2169342bfddf8ea9d314ee,
+        type: 3}
+      propertyPath: m_Colors.m_PressedColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8448021481479496435, guid: 190bd2081c2169342bfddf8ea9d314ee,
+        type: 3}
+      propertyPath: m_Colors.m_PressedColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8448021481479496435, guid: 190bd2081c2169342bfddf8ea9d314ee,
+        type: 3}
+      propertyPath: m_Colors.m_PressedColor.b
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8448021481479496444, guid: 190bd2081c2169342bfddf8ea9d314ee,
         type: 3}
       propertyPath: m_LocalPosition.x
